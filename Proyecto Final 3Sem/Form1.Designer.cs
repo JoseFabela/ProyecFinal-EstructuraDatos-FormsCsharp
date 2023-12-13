@@ -34,6 +34,8 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.listBoxHistorialAcciones = new System.Windows.Forms.ListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnActualizarGrafica = new System.Windows.Forms.Button();
+            this.chartGananciasPerdidas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnRetirar = new System.Windows.Forms.Button();
             this.lblGananciasPerdidas = new System.Windows.Forms.Label();
@@ -62,16 +64,14 @@
             this.btnAgregarSaldo = new System.Windows.Forms.Button();
             this.lblSaldo = new System.Windows.Forms.Label();
             this.Trasacciones = new System.Windows.Forms.TabControl();
-            this.btnActualizarGrafica = new System.Windows.Forms.Button();
-            this.chartGananciasPerdidas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage7.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGananciasPerdidas)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.Trasacciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGananciasPerdidas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage7
@@ -103,6 +103,32 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Estadísticas y Gráficos";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizarGrafica
+            // 
+            this.btnActualizarGrafica.Location = new System.Drawing.Point(831, 126);
+            this.btnActualizarGrafica.Name = "btnActualizarGrafica";
+            this.btnActualizarGrafica.Size = new System.Drawing.Size(97, 29);
+            this.btnActualizarGrafica.TabIndex = 1;
+            this.btnActualizarGrafica.Text = "Actualizar";
+            this.btnActualizarGrafica.UseVisualStyleBackColor = true;
+            this.btnActualizarGrafica.Click += new System.EventHandler(this.btnActualizarGrafica_Click);
+            // 
+            // chartGananciasPerdidas
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartGananciasPerdidas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGananciasPerdidas.Legends.Add(legend1);
+            this.chartGananciasPerdidas.Location = new System.Drawing.Point(13, 0);
+            this.chartGananciasPerdidas.Name = "chartGananciasPerdidas";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartGananciasPerdidas.Series.Add(series1);
+            this.chartGananciasPerdidas.Size = new System.Drawing.Size(643, 485);
+            this.chartGananciasPerdidas.TabIndex = 0;
+            this.chartGananciasPerdidas.Text = "chart1";
             // 
             // tabPage4
             // 
@@ -370,7 +396,7 @@
             // 
             // btnAgregarSaldo
             // 
-            this.btnAgregarSaldo.Location = new System.Drawing.Point(556, 145);
+            this.btnAgregarSaldo.Location = new System.Drawing.Point(561, 146);
             this.btnAgregarSaldo.Name = "btnAgregarSaldo";
             this.btnAgregarSaldo.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarSaldo.TabIndex = 1;
@@ -401,32 +427,6 @@
             this.Trasacciones.Size = new System.Drawing.Size(1319, 517);
             this.Trasacciones.TabIndex = 0;
             // 
-            // btnActualizarGrafica
-            // 
-            this.btnActualizarGrafica.Location = new System.Drawing.Point(831, 126);
-            this.btnActualizarGrafica.Name = "btnActualizarGrafica";
-            this.btnActualizarGrafica.Size = new System.Drawing.Size(97, 29);
-            this.btnActualizarGrafica.TabIndex = 1;
-            this.btnActualizarGrafica.Text = "Actualizar";
-            this.btnActualizarGrafica.UseVisualStyleBackColor = true;
-            this.btnActualizarGrafica.Click += new System.EventHandler(this.btnActualizarGrafica_Click);
-            // 
-            // chartGananciasPerdidas
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGananciasPerdidas.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartGananciasPerdidas.Legends.Add(legend1);
-            this.chartGananciasPerdidas.Location = new System.Drawing.Point(13, 0);
-            this.chartGananciasPerdidas.Name = "chartGananciasPerdidas";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartGananciasPerdidas.Series.Add(series1);
-            this.chartGananciasPerdidas.Size = new System.Drawing.Size(643, 485);
-            this.chartGananciasPerdidas.TabIndex = 0;
-            this.chartGananciasPerdidas.Text = "chart1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,6 +438,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage7.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartGananciasPerdidas)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -446,7 +447,6 @@
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             this.Trasacciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartGananciasPerdidas)).EndInit();
             this.ResumeLayout(false);
 
         }
